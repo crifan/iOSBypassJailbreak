@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'iOSBypassJailbreak' target in the 'iOSBypassJailbreak' project
+//
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+#endif

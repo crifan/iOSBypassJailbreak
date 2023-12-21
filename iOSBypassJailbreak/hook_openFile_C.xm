@@ -374,27 +374,27 @@ int open(const char *path, int oflag, ...);
 // https://developer.apple.com/library/archive/documentation/System/Conceptual/ManPages_iPhoneOS/man3/fopen.3.html
 FILE* fopen(const char *filename, const char *mode);
 
-%hookf(int, fopen, const char *filename, const char *mode){
+%hookf(FILE*, fopen, const char *filename, const char *mode){
     iosLogDebug("filename=%{public}s, mode=%{public}s", filename, mode);
-    int retValue = FOPEN_OPEN_FAILED;
+    FILE* retFp = FOPEN_OPEN_FAILED;
     bool isJbPath = false;
 
     if(cfgHookEnable_openFileC_fopen){
         isJbPath = isJailbreakPath(filename);
         if (isJbPath){
-            retValue = FOPEN_OPEN_FAILED;
+            retFp = FOPEN_OPEN_FAILED;
         } else {
-            retValue = %orig;
+            retFp = %orig;
         }
     } else {
-        retValue = %orig;
+        retFp = %orig;
     }
 
     // for debug
     if (isJbPath) {
-        iosLogInfo("filename=%{public}s, mode=%{public}s -> isJbPath=%s -> retValue=%d", filename, mode, boolToStr(isJbPath), retValue);
+        iosLogInfo("filename=%{public}s, mode=%{public}s -> isJbPath=%s -> retFp=%d", filename, mode, boolToStr(isJbPath), retFp);
     }
-    return retValue;
+    return retFp;
 }
 
 /*==============================================================================

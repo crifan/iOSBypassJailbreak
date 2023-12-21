@@ -1,6 +1,6 @@
 Package: com.crifan.iOSBypassJailbreak
 Name: iOSBypassJailbreak
-Version: 1.0-1
+Version: 2023.12.21
 Description: Common tweak for bypass jailbreak detection == anti-jailbreak. developed using iOSOpenDev.
 Section: System
 Depends: firmware (>= 5.0), mobilesubstrate

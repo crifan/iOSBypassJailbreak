@@ -42,7 +42,7 @@
 #define _LOGOS_RETURN_RETAINED
 #endif
 
-@class NSURL; @class NSFileManager; 
+@class NSFileManager; @class NSURL; 
 static NSArray<NSString *> * (*_logos_orig$_ungrouped$NSFileManager$contentsOfDirectoryAtPath$error$)(_LOGOS_SELF_TYPE_NORMAL NSFileManager* _LOGOS_SELF_CONST, SEL, NSString *, NSError * _Nullable *); static NSArray<NSString *> * _logos_method$_ungrouped$NSFileManager$contentsOfDirectoryAtPath$error$(_LOGOS_SELF_TYPE_NORMAL NSFileManager* _LOGOS_SELF_CONST, SEL, NSString *, NSError * _Nullable *); static BOOL (*_logos_orig$_ungrouped$NSFileManager$fileExistsAtPath$)(_LOGOS_SELF_TYPE_NORMAL NSFileManager* _LOGOS_SELF_CONST, SEL, NSString *); static BOOL _logos_method$_ungrouped$NSFileManager$fileExistsAtPath$(_LOGOS_SELF_TYPE_NORMAL NSFileManager* _LOGOS_SELF_CONST, SEL, NSString *); static BOOL (*_logos_orig$_ungrouped$NSFileManager$fileExistsAtPath$isDirectory$)(_LOGOS_SELF_TYPE_NORMAL NSFileManager* _LOGOS_SELF_CONST, SEL, NSString *, BOOL *); static BOOL _logos_method$_ungrouped$NSFileManager$fileExistsAtPath$isDirectory$(_LOGOS_SELF_TYPE_NORMAL NSFileManager* _LOGOS_SELF_CONST, SEL, NSString *, BOOL *); static BOOL (*_logos_orig$_ungrouped$NSURL$checkResourceIsReachableAndReturnError$)(_LOGOS_SELF_TYPE_NORMAL NSURL* _LOGOS_SELF_CONST, SEL, NSError * _Nullable *); static BOOL _logos_method$_ungrouped$NSURL$checkResourceIsReachableAndReturnError$(_LOGOS_SELF_TYPE_NORMAL NSURL* _LOGOS_SELF_CONST, SEL, NSError * _Nullable *); 
 
 #line 23 "/Users/crifan/dev/dev_root/crifan/iOSBypassJailbreak/iOSBypassJailbreak/hook_openFile_iOS.xm"
